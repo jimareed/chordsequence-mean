@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+</head>
+<body ng-app='app'>
+  <div ng-controller='SongsCtrl' class='container'>
+    <h1>Songs</h1>
+    <table>
+      <tr>
+        <td><button onclick="location.href='/addsong';" class='btn btn-default'>Add Song</button></td>
+      </tr>
+    </table>
+    <ul class='list-group'>
+      <li ng-repeat="song in songs | orderBy:'-date'" class='list-group-item'>
+        <strong><a href='/{{song.username}}/{{song.songid}}'>{{song.songtitle}}</a></strong>
+        <span>{{song.artist}}</span>
+      </li>
+    </ul>
+  </div>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+  <script src='/app.js'></script>
+</body>
+</html>

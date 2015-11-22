@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+</head>
+<body ng-app='app'>
+  <div ng-controller='SongsCtrl' class='container'>
+    <h1>Add Song</h1>
+    <table>
+      <tr>
+        <td>Title</td>
+        <td><input ng-model='songTitle' class='form-control' /></td>
+        <td><button ng-click='addSong()' class='btn btn-default'>Add Song</button></td>
+      </tr>
+      <tr>
+        <td>Artist</td>
+        <td><input ng-model='songArtist' class='form-control' /></td>
+        <td><button onclick="location.href='/';" class='btn btn-default'>Return</button></td>
+      </tr>
+      <tr>
+        <td>Chord Sequence</td>
+        <td><input ng-model='songChordsequence' class='form-control' /></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Lyrics</td>
+        <td><input ng-model='songLyrics' class='form-control' /></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.js'></script>
+  <script src='/app.js'></script>
+</body>
+</html>
