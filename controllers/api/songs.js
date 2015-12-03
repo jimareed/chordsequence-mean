@@ -10,6 +10,23 @@ router.get('/',function(req,res,next) {
    })
 })
 
+router.get('/:id', function(req, res, next) {
+    Song.findById(req.params.id, function(err, song) {
+        if (err) {
+            console.error(err);
+            return next(err);
+        }
+
+        if (!song) {
+            return res.status(404).send();
+        }
+
+        console.log(song);
+        res.status(200).send(song);
+    });
+});
+
+
 router.post('/',function(req,res,next){
   var song = new Song( {
 	   username:req.body.username,
