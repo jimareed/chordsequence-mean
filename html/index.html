@@ -3,41 +3,67 @@
 <head>
         <meta charset="utf-8" />
         <title>Chord Sequence</title>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-responsive.min.css"/>
         <meta name="HandheldFriendly" content="True" />
         <meta name="MobileOptimized" content="320" />
         <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1" />
         <style>
-        body {
-                font-family: Helvetica, Arial, sans-serif;
-                background-color: white;
-        }
-        h1 {
-                font-size: 20px;
-        }
-        div {
-                width: 100%;
-        }
-        a img {
-                border:none;
-        }
+          body {
+                  font-family: Helvetica, Arial, sans-serif;
+                  background-color: white;
+          }
+          h1 {
+                  font-size: 20px;
+          }
+          div {
+                  width: 100%;
+          }
+          a img {
+                  border:none;
+          }
 
+          .img-wrapper {
+            position: relative;
+          }
+
+          .img-overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: left;
+          }
+
+          .img-overlay:before {
+            content: ' ';
+            display: block;
+            /* adjust 'height' to position overlay content vertically */
+            height: 80%;
+          }
         </style>
 </head>
 <body>
-<div>
-        <img src="images/chordsequence-main.jpeg" height="380" alt="" />
-        <table width="100%">
-                <tr width="100%">
-                        <td width="5%"/>
-                        <td width="60%">
-                        <p>I'm in the middle of switching to a new version of Chord Sequence, hopefully will be done in a week or two.</p>
-                        <p/>
-                        </td>
-                        <td width="5%"/>
-                        <td align="right" width="30%">
-                        </td>
-                </tr>
-        </table>
+        <script type="text/javascript" language="JavaScript">
+          function clickedButton() {
+                window.location = 'http://chordsequence.com:3000'
+          }
+        </script>
+<div class="img-wrapper">
+    <img class="img-responsive" src="images/chordsequence-main.jpeg">
+    <div class="img-overlay">
+    	<table width="100%">
+    		<tr>
+      		<td width="10%"></td>
+      		<td>
+             			<button onclick="clickedButton()" class="btn btn-md btn-success">Try it now</button>
+      		</td>
+    		</tr>
+    	</table>
+    </div>
 </div>
 </body>
 </html>
